@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
+
+body {
+  font-family: 'Fira Code', "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 5vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.default-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-gap: 2vw;
+  width: calc(100% + 4vw);
+  height: 100%;
+  transform: translate(-2vw, -1vw);
+}
+
+.default-view > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.title {
+  grid-column: 1 / -1;
+}
+
+.current-time {
+  grid-column: 1 / -1;
+  font-size: 18vw;
+  font-weight: bold;
+}
+
+.current-time:empty:after {
+  content: 'Loading';
+  display: block;
+}
+
+.current-date:empty:after {
+  content: 'Date';
+  display: block;
+}
+
+.alarm-time:empty:after {
+  content: 'Alarm';
+  display: block;
+}

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  div.default-view
+    div.title= 'RPI Alarm Clock'
+    time.current-time(data-current-time)
+    time.current-date(data-current-date)
+    time.alarm-time(data-alarm-time)
